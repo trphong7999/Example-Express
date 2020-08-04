@@ -1,5 +1,43 @@
-extends ./layouts/common.pug
+html
+	head
+		title Hotel Pennsylvania
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/styles/custom.css")
+		link(rel="stylesheet" href="https://use.fontawesome.com/release/v5.14.0/css/all.css")
+	body
+		nav(class="navbar navbar-expand-md navbar-light bg-light sticky-top")
+			div(class="container-fluid")
+				a(class="navbar-branch" href="#")
+					img(src="/images/avatar.jpg" height="50")
+				button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive")
+					span(class="navbar-toggler-icon")
+				div(class="collapse navbar-collapse" id="navbarResponsive")
+					ul(class="navbar-nav ml-auto")
+						li(class="nav-item d-flex")
+							a(class="nav-link btn-3 active"  href="/#") Home
+							a(class="nav-link btn-3" href="/users") Users List							
+							a(class="nav-link btn-3" href="/#") Services
+							a(class="nav-link btn-3" href="/#") Board
+							a(class="nav-link btn-3" href="/#") Connect
 
-block content
-	h1 LOL! #{name}
-	a(href="/users") user list
+<!-- Carousel -->
+		div(id="slides" class="carousel slide" data-ride="carousel")
+			ul(class="carousel-indicators")
+				li(data-target="#slides" data-slide-to="0" class="active")
+				li(data-target="#slides" data-slide-to="1")
+				li(data-target="#slides" data-slide-to="2")
+				li(data-target="#slides" data-slide-to="3")
+			div(class="carousel-inner")
+				div(class="carousel-item active")
+					img(src="/images/part0.jpg")
+				div(class="carousel-item active")
+					img(src="/images/part1.jpg")
+				div(class="carousel-item active")
+					img(src="/images/part2.jpg")
+				div(class="carousel-item active")
+					img(src="/images/part3.jpg")
+
+
+		h1 WELCOME to #{name}
+
+		img(src="/images/avatar.jpg" height="100")

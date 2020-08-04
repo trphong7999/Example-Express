@@ -14,9 +14,12 @@ app.set('views','./views');
 app.use(bodyParser.json()); //for parsing application/json
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(express.static('public'));
+
+//Routes
 app.get('/', function(req,res){
 	res.render('index',{
-		name: 'LLL'
+		name: 'Pennsylvania'
 	});
 })
 

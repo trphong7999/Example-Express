@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto';
+	font-size: 15px;
+	color: #222;
+}
+
+.navbar {
+	background-color: rgb(52,52,52) !important;
+}
+
+.navbar li a {
+	color: white !important;
+}
+
+.btn-3 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 0ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-3:hover {
+  border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+
+.carousel-inner img {
+	width: 100%;
+}
