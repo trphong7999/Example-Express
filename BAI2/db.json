@@ -1,16 +1,11 @@
 {
   "users": [
     {
-      "name": "Dai",
-      "id": "Ggp7gunve"
-    },
-    {
       "name": "Phong",
-      "id": "qPhD_0l_G"
-    },
-    {
-      "name": "Hung",
-      "id": "E89zGcGcS"
+      "id": "qPhD_0l_G",
+      "phone": "0345029068",
+      "email": "phongduytran7999@gmail.com",
+      "password": "phong123"
     },
     {
       "name": "Hieu",
