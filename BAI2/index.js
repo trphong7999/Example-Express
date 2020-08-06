@@ -17,7 +17,7 @@ app.set('views','./views');
 
 app.use(bodyParser.json()); //for parsing application/json
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cookieParser());
+app.use(cookieParser('eqweekrpkgke234'));
 
 app.use(express.static('public'));
 
