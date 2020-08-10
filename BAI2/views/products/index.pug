@@ -8,26 +8,53 @@ block content
 		form.ml-auto(action="/products/search", method="GET", class="d-flex")
 			input(type="text", name="q", class="form-control")
 			button(class="btn btn-dark ml-2") Search
+	
 	.d-flex
-		each product in products
-			.d-flex.flex-column.col-3
-				img(class="card-img-top" src=product.image)
-				h5.card-title=product.name
-				p.card-text=product.description
-				button.btn.btn-dark Add to Cart
-	.pag
-		ul.pagination.justify-content-end
-			li.page-item.disabled
-				a.page-link(href='/products?page='+(page-1)) Previous
-			li.page-item
-				a.page-link(href='/products?page='+(page-1))=page-1
-			li.page-item.active(arira-current='page')
-				a.page-link(href='/products?page='+page)
-					| #{page}
-					span.sr-only (current)
-			li.page-item
-				a.page-link(href='/products?page='+(page+1))=page+1
-			li.page-item
-				a.page-link(href='/products?page='+(page+1)) Next
+		each product,index in products
+			.col-3.card(style="width: 18rem;")
+				if index < 4
+					img(class="card-img-top" src=product.image)
+					.card-body
+						h5.card-title=product.name
+						p.card-text=product.description
+						button.btn.btn-dark Add to Cart
+	
+	
+	
 
+	nav(aria-label='Page navigation example')
+		ul.pagination.justify-content-end
+			if page===1
+				li.page-item.disabled
+					a.page-link(href='./products?page='+(page-1)) Previous
+				li.page-item.active
+					a.page-link(href='./products?page='+page)=page
+				li.page-item
+					a.page-link(href='./products?page='+(page+1))=page+1
+				li.page-item
+					a.page-link(href='./products?page='+(page+2))=page+2
+				li.page-item
+					a.page-link(href='./products?page='+(page+1)) Next
+			else if page===sumPage
+				li.page-item
+					a.page-link(href='./products?page='+(page-1)) Previous
+				li.page-item
+					a.page-link(href='./products?page='+(sumPage-2))=sumPage-2
+				li.page-item
+					a.page-link(href='./products?page='+(sumPage-1))=sumPage-1
+				li.page-item.active
+					a.page-link(href='./products?page='+sumPage)=sumPage
+				li.page-item.disabled
+					a.page-link(href='./products?page='+(page+1)) Next
+			else
+				li.page-item
+					a.page-link(href='./products?page='+(page-1)) Previous
+				li.page-item
+					a.page-link(href='./products?page='+(page-1))=page-1
+				li.page-item.active
+					a.page-link(href='./products?page='+(page))=page
+				li.page-item
+					a.page-link(href='./products?page='+(page+1))=page+1
+				li(class=page===sumPage?'page-item disabled':'page-item' )
+					a.page-link(href='./products?page='+(page+1)) Next				
 	

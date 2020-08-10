@@ -10,7 +10,8 @@ module.exports.index = function(req,res){
 	
 	res.render('products/index', {
 		products: db.get('products').value().slice(start,end),
-		page:page			
+		page:page,
+		sumPage: parseInt(db.get('products').value().length/4)			
 	});
 };
 

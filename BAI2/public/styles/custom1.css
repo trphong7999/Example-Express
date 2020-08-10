@@ -1,3 +1,12 @@
-.box{
-	-webkit-box-sizing: border-box;
+.card-body h5{
+	overflow : hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;  
 }
+
+.card-body p{
+	overflow : hidden;
+	display: -webkit-box;
+  	-webkit-line-clamp: 3;
+  	-webkit-box-orient: vertical;
