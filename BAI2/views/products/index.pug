@@ -16,13 +16,15 @@ block content
 				p.card-text=product.description
 				button.btn.btn-dark Add to Cart
 	.pag
-		ul.pagination
-			li.page-item
-				a.page-link(href='/products?page='+(page-1) tabindex="-1" aria-disabled="true") Previous
+		ul.pagination.justify-content-end
+			li.page-item.disabled
+				a.page-link(href='/products?page='+(page-1)) Previous
 			li.page-item
 				a.page-link(href='/products?page='+(page-1))=page-1
-			li.page-item
-				a.page-link(href='/products?page='+page)=page
+			li.page-item.active(arira-current='page')
+				a.page-link(href='/products?page='+page)
+					| #{page}
+					span.sr-only (current)
 			li.page-item
 				a.page-link(href='/products?page='+(page+1))=page+1
 			li.page-item
