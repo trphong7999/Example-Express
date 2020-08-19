@@ -1,0 +1,17 @@
+extends ../layouts/common.pug
+
+block content
+	h1
+		span.mr-5 Your carts
+
+	table.table
+		tr
+			th Product
+			th Number of cart
+		
+		each product in cart
+			tr
+				td
+					img(src=product.image, width="64")
+					product.name
+				td= product.count
